@@ -1,0 +1,103 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+w-r5-p6.s19.be
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug 10 21:28:25 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/piscine-c-exam00/exam_20180810/dabeloos
+
+= Git history ==================================================================
+$> git -C /var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user log --pretty='%H - %an, %ad : %s'
+893ecf8e4b17c16bd683b693e8d794308ae49e35 - Exam 42, Fri Aug 10 21:28:07 2018 +0200 : level 4
+5d234ed875131ef630822bf2c0933513c8f78094 - Exam 42, Fri Aug 10 19:25:49 2018 +0200 : level 3
+5a77becb6260f7ac0f3a2ea1f10829e11f59d119 - Exam 42, Fri Aug 10 18:44:51 2018 +0200 : level 2 maff_revalpha
+ff206625b0a9b11bf24dc7757cfaa4856e3141f3 - Exam 42, Fri Aug 10 18:31:07 2018 +0200 : level 1 ft_count_down
+3b5a7959d1cfa87d35c3c35b0dc3deeee76a09ce - Exam 42, Fri Aug 10 18:16:23 2018 +0200 : level 0 only_a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1194 Aug 10 21:28 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:28 ft_atoi
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:28 ft_countdown
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:28 ft_strcmp
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:28 maff_revalpha
+drwxr-xr-x  3 deepthought  deepthought   102 Aug 10 21:28 only_a
+
+/var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user/ft_atoi:
+total 8
+-rw-r--r--  1 deepthought  deepthought  940 Aug 10 21:28 ft_atoi.c
+
+/var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user/ft_countdown:
+total 8
+-rw-r--r--  1 deepthought  deepthought  225 Aug 10 21:28 ft_countdown.c
+
+/var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user/ft_strcmp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  354 Aug 10 21:28 ft_strcmp.c
+
+/var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user/maff_revalpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  275 Aug 10 21:28 maff_revalpha.c
+
+/var/folders/7f/8_p0n_bs7hq2vv4bbzy2bw8r0000gq/T/tmp0mhJQ4/user/only_a:
+total 8
+-rw-r--r--  1 deepthought  deepthought  117 Aug 10 21:28 only_a.c
+ 
+= ft_atoi ======================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_atoi.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./5nz48fhxunjiitbsvaitzp0l 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./2a3i8tqxi32x55vym7mfnlk8 "21" "2313"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./4n7oxdsgo1nx4wnmacn5bkb4 2147483647
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./j14s6u7oljlbti07wtbsxm79 -2147483648
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./ud3lm96wzpiv1phtwg4ij000 0
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./4sq06ha8akv3ormi23tee38j 12211t11
+$> diff -U 3 user_output_test6 test6.output | cat -e
+--- user_output_test6	2018-08-10 21:28:27.000000000 +0200$
++++ test6.output	2018-08-10 21:28:27.000000000 +0200$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++12211$
+\ No newline at end of file$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
